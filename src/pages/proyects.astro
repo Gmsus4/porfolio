@@ -1,0 +1,145 @@
+---
+import Footer from "../components/Footer.astro";
+import Subtitle from "../components/Subtitle.astro";
+import Bootstrap from "../icons/Bootstrap.astro";
+import Chakraui from "../icons/Chakraui.astro";
+import CSSIcon from "../icons/CSSIcon.astro";
+import Discord from "../icons/Discord.astro";
+import Express from "../icons/Express.astro";
+import Firebase from "../icons/Firebase.astro";
+import GitHub from "../icons/GitHub.astro";
+import Html from "../icons/Html.astro";
+import JavaScript from "../icons/JavaScript.astro";
+import MongoDB from "../icons/MongoDB.astro";
+import NextJS from "../icons/NextJS.astro";
+import NodeJS from "../icons/NodeJS.astro";
+import Postgresql from "../icons/Postgresql.astro";
+import Prisma from "../icons/Prisma.astro";
+import React from "../icons/React.astro";
+import Redux from "../icons/Redux.astro";
+import Tailwind from "../icons/Tailwind.astro";
+import TypeScript from "../icons/TypeScript.astro";
+import Layout from "../layouts/Layout.astro";
+
+const PROYECTS = [
+  {
+    title: "Teslo-Shop",
+    description:
+      "Un ecommerce con una sección administrativa que permite agregar o eliminar productos, además de integrar compras mediante PayPal.",
+    img: "/img/teslo-shop.webp",
+    icons: [NextJS, Postgresql, Prisma, Tailwind, TypeScript],
+    linkToPage: 'https://teslo-shop-black.vercel.app/',
+    linkToProyect: 'https://github.com/Gmsus4/teslo-shop'
+  },
+  {
+    title: "Limeman",
+    description:
+      "Una red social similar a Instagram donde puedes ver, crear, eliminar y actualizar publicaciones. Utiliza Firebase para la base de datos y la autenticación.",
+    img: "/img/limeman.webp",
+    icons: [React, Firebase, Chakraui],
+    linkToPage: 'https://limesocial.vercel.app/',
+    linkToProyect: 'https://github.com/Gmsus4/teslo-shop'
+  },
+  {
+    title: "FerCamp",
+    description:
+      "Una red social para crear puntos de reunión y organizar campamentos con amigos, ideal para conocer nuevas personas.",
+    img: "/img/fer-camp.webp",
+    icons: [NodeJS, Express, MongoDB, Bootstrap],
+    linkToPage: 'https://ferr-camp.onrender.com/',
+    linkToProyect: 'https://github.com/Gmsus4/ferCamp/tree/master'
+  },
+  {
+    title: "CalendarApp",
+    description:
+      "Una página web sobre un calendario interactivo que permite agregar, editar y eliminar eventos, ideal para la gestión de tu tiempo.",
+    img: "/img/calendar-app.webp",
+    icons: [MongoDB, Express, React, NodeJS, Redux],
+    linkToPage: 'https://calendardate.netlify.app/',
+    linkToProyect: 'https://github.com/Gmsus4/calendarApp'
+  },
+  {
+    title: "SimplyClima",
+    description:
+      "Una página minimalista que muestra el clima actual utilizando una API para obtener la información meteorológica.",
+    img: "/img/simply-clima.webp",
+    icons: [Html, CSSIcon, JavaScript],
+    linkToPage: 'https://simplyclima.netlify.app/',
+    linkToProyect: 'https://github.com/Gmsus4/SimpleClima'
+  },
+  {
+    title: "pianovirtualonline",
+    description:
+      "Una página que te permite tocar un piano virtual de dos octavas, con un diseño minimalista.",
+    img: "/img/virtual-piano.webp",
+    icons: [Html, CSSIcon, JavaScript],
+    linkToPage: 'https://pianovirtualonline.netlify.app/',
+    linkToProyect: 'https://github.com/Gmsus4/piano'
+  },
+];
+
+---
+
+<Layout title="Hola, Soy Fer">
+    <section
+      class="flex items-center justify-center flex-col astro"
+      id="about-me"
+    >
+    <Subtitle title="Proyectos"/>
+      <p class="text-gray-300 mt-6 lg:text-xl text-lg">
+        Durante mi proceso de aprendizaje, he trabajado en diversos proyectos personales. A continuación, te presento algunos de los más interesantes y relevantes:
+      </p>
+      
+      <div
+        class="grid gap-4 lg:grid-cols-2 grid-cols-1 w-full mt-6"
+      >
+        {
+          PROYECTS.map(({ description, img, title, icons, linkToPage, linkToProyect }) => (
+            <div class=" dark:bg-gray-800 dark:border-gray-700 bg-white border border-gray-200 rounded-lg shadow">
+              <a href={linkToPage} target="_blank">
+                <img class="rounded-t-lg" src={`${img}`} alt={`${title}-image`} />
+              </a>
+              <div class="p-5">
+                <a href={linkToPage} target="_blank">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    {title}
+                  </h5>
+                </a>  
+                <p class="mb-3 font-normal text-lg text-start text-pretty text-gray-700 dark:text-gray-400">
+                  {description}
+                </p>
+                <div class="flex gap-2 items-center justify-around my-6">
+                  {icons.map((Icon) => (
+                    <Icon class="size-10" />
+                  ))}
+                </div>
+                <a
+                  href={linkToProyect} target="_blank"
+                  class="inline-flex gap-2 items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg hover:bg-black/70 transition-colors ease-in focus:ring-4 focus:outline-none focus:ring-blue-300 bg-black/90"
+                >
+                  Ver proyecto
+                  <GitHub class="size-6"/>
+                </a>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+      
+    </section>
+    <Footer title="proyects"/>
+
+</Layout>
+
+<style>
+  .astro {
+    margin: auto;
+    padding: 1rem;
+    margin-top: 40px;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+</style>

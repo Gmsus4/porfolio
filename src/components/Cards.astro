@@ -1,0 +1,39 @@
+---
+import Card from "../components/Card.astro";
+---
+
+<ul role="list" class="link-card-grid text-justify">
+    <Card
+      href="/skills"
+      title="Exp. Laboral y Aprendizajes"
+      title="Skills"
+      body="Conocimientos actuales y tecnologías que estoy aprendiendo para desarrollo web y móvil."
+    />
+    <Card
+      href="/proyects"
+      title="Proyectos"
+      body="Explora mis proyectos personales y descubre cómo puedo aportar valor a tu equipo con mis habilidades y experiencia."
+    />
+    <Card
+      href="/about"
+      title="Sobre mí"
+      body="A mediados de un 2016 descubrí cómo ponerle color de fondo a una página web."
+      body="Descubre cómo mi pasión por la tecnología me ha guiado, impulsando mi crecimiento y éxito en el desarrollo web."
+    />
+    <Card
+      href="/contact"
+      title="Contáctame"
+      body="¡Hablemos! Estoy disponible para colaborar y aportar a tu próximo proyecto. ❤️"
+      body="¡Contáctame! Estoy preparado para contribuir en proyectos innovadores y desafiantes."
+    />
+  </ul>
+
+  
+<style>
+    .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
+</style>

@@ -1,0 +1,86 @@
+---
+import Tailwind from "../icons/Tailwind.astro";
+import JavaScript from "../icons/JavaScript.astro";
+import GitHub from "../icons/Git.astro";
+import Html from "../icons/Html.astro";
+import MongoDB from "../icons/MongoDB.astro";
+import NextJS from "../icons/NextJS.astro";
+import NodeJS from "../icons/NodeJS.astro";
+import Postgresql from "../icons/Postgresql.astro";
+import React from "../icons/React.astro";
+import TypeScript from "../icons/TypeScript.astro";
+import Prisma from "../icons/Prisma.astro";
+import CSSIcon from "../icons/CSSIcon.astro";
+import Express from "../icons/Express.astro";
+---
+<div class="instructions">
+    <div
+    class="flex flex-col sm:flex-row sm:items-center items-start justify-center gap-x-4"
+    >
+    <img
+      src="https://res.cloudinary.com/dozzu7xhx/image/upload/v1686943818/perfil/azbel14qetbdbs282zem.jpg"
+      alt=""
+      class="rounded-xl sm:mb-0 mb-4 w-20 h-20"
+    />
+    <p class="lg:text-balance lg:text-xl text-lg">
+      Un apasionado <strong>desarrollador web</strong> de <strong
+        >Jalisco, México</strong
+      >. Con más de dos años de experiencia, me especializo en <strong
+        >crear aplicaciones web</strong
+      > robustas y eficientes, destacándome en:
+    </p>
+    </div>
+    
+    <div
+    class="flex flex-wrap gap-12 w-full items-center justify-start lg:justify-between mt-6"
+    >
+    <div class="flex gap-x-2">
+      <Html class="size-9" />
+      <CSSIcon class="size-9" />
+      <Tailwind class="size-9" />
+      <JavaScript class="size-9" />
+      <TypeScript class="size-9" />
+    </div>
+    
+    <div class="flex gap-x-2">
+      <GitHub class="size-9" />
+    </div>
+    
+    <div class="flex gap-x-2">
+      <React class="size-9" />
+      <NextJS class="size-9" />
+    </div>
+    
+    <div class="flex gap-x-2">
+      <Prisma class="size-9" />
+      <NodeJS class="size-9" />
+      <Express class="size-9" />
+      <MongoDB class="size-9" />
+      <Postgresql class="size-9" />
+    </div>
+    </div>
+</div>
+
+<style>
+    .instructions {
+    margin-bottom: 2rem;
+    border: 1px solid rgba(var(--accent-light), 25%);
+    background: linear-gradient(
+      rgba(var(--accent-dark), 66%),
+      rgba(var(--accent-dark), 33%)
+    );
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  .instructions code {
+    font-size: 0.8em;
+    font-weight: bold;
+    background: rgba(var(--accent-light), 12%);
+    color: rgb(var(--accent-light));
+    border-radius: 4px;
+    padding: 0.3em 0.4em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent-light));
+  }
+</style>

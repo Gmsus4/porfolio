@@ -1,0 +1,340 @@
+---
+import Footer from "../components/Footer.astro";
+import Subtitle from "../components/Subtitle.astro";
+import AstroIcon from "../icons/AstroIcon.astro";
+import Bootstrap from "../icons/Bootstrap.astro";
+import CSSIcon from "../icons/CSSIcon.astro";
+import Docker from "../icons/Docker.astro";
+import Express from "../icons/Express.astro";
+import Figma from "../icons/Figma.astro";
+import Git from "../icons/Git.astro";
+import GitHub from "../icons/GitHub.astro";
+import Html from "../icons/Html.astro";
+import JavaScript from "../icons/JavaScript.astro";
+import MongoDB from "../icons/MongoDB.astro";
+import Mongoose from "../icons/Mongoose.astro";
+import NextJS from "../icons/NextJS.astro";
+import NodeJS from "../icons/NodeJS.astro";
+import Photoshop from "../icons/Photoshop.astro";
+import Postgresql from "../icons/Postgresql.astro";
+import Prisma from "../icons/Prisma.astro";
+import React from "../icons/React.astro";
+import SocketIo from "../icons/SocketIo.astro";
+import Tailwind from "../icons/Tailwind.astro";
+import TypeScript from "../icons/TypeScript.astro";
+import VisualStudioCode from "../icons/VisualStudioCode.astro";
+import Layout from "../layouts/Layout.astro";
+
+// const EXP_LABORAL = [
+//   {
+//     date: "Enero 2022 - Presente",
+//     title: "Empresa ABC",
+//     targets: [
+//       {
+//         title: 'Desarrollo de aplicaciones web utilizando React y Node.js.',
+//         subTarget: ''
+//       },
+//       {
+//         title: 'Implementación de soluciones backend con PostgreSQL',
+//         subTarget: ''
+//       },
+//       {
+//         title: 'Colaboración con equipos de diseño para crear interfaces de usuario intuitivas.',
+//         subTarget: ''
+//       }
+//     ],
+//   },
+//   {
+//     date: "Julio 2020 - Diciembre 2021",
+//     title: "Empresa XYZ",
+//     targets: [
+//       {
+//         title: 'Mantenimiento y mejora de aplicaciones web existentes.',
+//         subTarget: ''
+//       },
+//       {
+//         title: 'Creación de APIs RESTful y servicios web',
+//         subTarget: ''
+//       },
+//       {
+//         title: 'Uso de metodologías ágiles para la gestión de proyectos.',
+//         subTarget: ''
+//       }
+//     ],
+//   },
+// ];
+
+const TECNOLGIAS_APRENDIDAS = [
+  {
+    type: "Front-end",
+    tecnologies: [
+      {
+        name: "HTML",
+        Icon: Html,
+      },
+      {
+        name: "CSS",
+        Icon: CSSIcon,
+      },
+      {
+        name: "JavaScript",
+        Icon: JavaScript,
+      },
+      {
+        name: "TypeScript",
+        Icon: TypeScript,
+      },
+    ],
+  },
+  {
+    type: "Frameworks/Librerías de JavaScript",
+    tecnologies: [
+      {
+        name: "React",
+        Icon: React,
+      },
+      {
+        name: "Next.js",
+        Icon: NextJS,
+      },
+    ],
+  },
+  {
+    type: "Frameworks de CSS",
+    tecnologies: [
+      {
+        name: "Tailwind",
+        Icon: Tailwind,
+      },
+      {
+        name: "Bootstrap",
+        Icon: Bootstrap,
+      },
+    ],
+  },
+  {
+    type: "Back-end",
+    tecnologies: [
+      {
+        name: "Node.js",
+        Icon: NodeJS,
+      },
+    ],
+  },
+  {
+    type: "Frameworks de Node.js",
+    tecnologies: [
+      {
+        name: "Express.js",
+        Icon: Express,
+      },
+    ],
+  },
+  {
+    type: "Bases de datos",
+    tecnologies: [
+      {
+        name: "PostgreSQL",
+        Icon: Postgresql,
+      },
+      {
+        name: "MongoDB",
+        Icon: MongoDB,
+      },
+    ],
+  },
+  {
+    type: "ORMs (Object-Relational Mappers)",
+    tecnologies: [
+      {
+        name: "Prisma",
+        Icon: Prisma,
+      },
+      {
+        name: "Mongoose",
+        Icon: Mongoose,
+      },
+    ],
+  },
+  {
+    type: "Control de versiones",
+    tecnologies: [
+      {
+        name: "Git",
+        Icon: Git,
+      },
+      {
+        name: "GitHub",
+        Icon: GitHub,
+      },
+    ],
+  },
+  {
+    type: "Editores de código/IDEs",
+    tecnologies: [
+      {
+        name: "Visual Studio Code",
+        Icon: VisualStudioCode,
+      },
+    ],
+  },
+  {
+    type: "Herramientas de diseño",
+    tecnologies: [
+      {
+        name: "Figma",
+        Icon: Figma,
+      },
+      {
+        name: "Photoshop",
+        Icon: Photoshop,
+      },
+    ],
+  },
+];
+
+const TECNOLGIAS_APRENDIZAJES = [
+  {
+    date: "En curso",
+    title: "Socket-io",
+    Icon: SocketIo,
+    subtitle:
+      "Objetivo: Mejorar mis habilidades en la implementación de comunicación en tiempo real entre clientes y servidores, permitiendo la creación de aplicaciones web interactivas y dinámicas.",
+  },
+  {
+    date: "Próximamente",
+    title: "Astro",
+    Icon: AstroIcon,
+    subtitle:
+      "Objetivo: Mejorar mis habilidades en la construcción de sitios web rápidos y optimizados.",
+  },
+  {
+    date: "Próximamente",
+    title: "Docker",
+    Icon: Docker,
+    subtitle:
+      "Objetivo: Comprender mejor la creación y administración de contenedores, facilitando el desarrollo y despliegue de aplicaciones en diferentes entornos.",
+  },
+  {
+    date: "Próximamente",
+    title: "React Native",
+    Icon: React,
+    subtitle: 'Objetivo: Mejorar mis habilidades en el desarrollo de aplicaciones móviles multiplataforma.',
+  },
+];
+---
+
+<Layout title="Hola, Soy Fer">
+  <section
+    class="min-h-[100vh] flex items-center justify-center flex-col astro w-[600px]"
+    id="about-me"
+  >
+    <Subtitle
+      title="Skills"
+      className="text-xl"
+    />
+    <p class="text-gray-300 mt-6">
+      A lo largo de los años, he colaborado estrechamente con clientes para
+      desarrollar páginas web que reflejen sus principios y ética. Esto me ha
+      permitido satisfacer sus necesidades digitales y adaptarme a la evolución
+      tecnológica constante.
+    </p>
+
+    <div
+      class="w-full h-auto grid lg:grid-cols-2 grid-cols-1 gap-10 items-start mt-10"
+    >
+      <!-- flex flex-row gap-10 items-start justify-around -->
+      <div class="flex flex-col">
+        <h2 class="mb-4 lg:text-3xl text-xl">Tecnologías aprendidas</h2>
+        <!-- <ol class="relative border-s border-gray-200 dark:border-gray-700">
+            {
+              EXP_LABORAL.map(({ date, targets, title }) => (
+                <li class="mb-4 ms-4">
+                  <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-3 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700" />
+                  <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                    {date}
+                  </time>
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                    {title}
+                  </h3>
+                  <ol class="flex flex-col gap-1 list-inside">
+                    {targets?.map(target => (
+                      <li class="text-base font-normal text-gray-500 list-disc" >
+                        {target.title}
+                      </li>
+                    ))}
+                  </ol>
+                  {/* <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                    {subtitle}
+                  </p> */}
+                </li>
+              ))
+            }
+          </ol> -->
+        <ol class="relative border-s border-gray-200 dark:border-gray-700">
+          {
+            TECNOLGIAS_APRENDIDAS.map(({ type, tecnologies }) => (
+              <li class="mb-4 ms-4">
+                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-3 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700" />
+                <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                  {type}
+                </time>
+                {tecnologies.map((tecnology) => (
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2 flex items-center gap-3">
+                    <tecnology.Icon class="w-6 h-6" />
+                    {tecnology.name}
+                  </h3>
+                ))}
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+
+      <div class="flex flex-col">
+        <h2 class="mb-4 lg:text-3xl text-xl">Tecnologías por aprender</h2>
+        <!-- en Aprendizaje -->
+        <ol class="relative border-s border-gray-200 dark:border-gray-700">
+          {
+            TECNOLGIAS_APRENDIZAJES.map(({ date, subtitle, title, Icon }) => (
+              <li class="mb-4 ms-4">
+                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-3 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700" />
+                <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                  {date}
+                </time>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2 flex items-center gap-3">
+                  <Icon class="size-6" />
+                  {title}
+                </h3>
+                <ol class="flex flex-col gap-1 list-inside">
+                  <p class="text-base font-normal text-gray-500">{subtitle}</p>
+                </ol>
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+    </div>
+  </section>
+  <Footer title="skills"/>
+</Layout>
+
+<style>
+  .astro {
+    margin: auto;
+    padding: 1rem;
+    /* margin-top: 40px; */
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  li {
+    margin-bottom:;
+  }
+  li:last-child {
+    margin-bottom: 0;
+  }
+</style>

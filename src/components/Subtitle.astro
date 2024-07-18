@@ -1,0 +1,47 @@
+---
+interface Props {
+	title: string;
+  className?: string;
+}
+
+const { title, className } = Astro.props;
+---
+
+<div class="w-full flex justify-start lg:justify-center items-center">
+  <h2 class=`${className} flex flex-row gap-x-4`>
+    <a href="/" class="lg:text-5xl md:text-4xl text-2xl">
+      Home
+    </a>
+    <p class="lg:text-5xl md:text-4xl text-2xl">/</p>
+    <p class="lg:text-5xl md:text-4xl text-2xl text-gradient">
+      {title}
+    </p>
+  </h2>
+</div>
+
+<style>
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+    height: 100%;
+    line-height: 1.5;
+  }
+  h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    /* margin-bottom: 1rem; */
+    /* font-size: 40px; */
+    padding: 5px;
+  }
+
+  p, a{
+    line-height: 1.5;
+  }
+
+  a{
+    text-decoration: underline;
+  }
+</style>

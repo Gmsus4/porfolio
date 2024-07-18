@@ -17,14 +17,36 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<!-- <div class="fixed inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div> -->
+		<!-- <div class="fixed inset-0 -z-10 h-full w-full items-center px-5 py-24 bg-[url('img/tile_background_5.png')]"></div> -->
+		<!-- <div class="relative h-full w-full bg-slate-950"><div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div></div> -->
+		<div class="fixed top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+		<!-- <div class="h-full w-full bg-slate-950"><div class="fixed z-[-2] bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)]"></div></div> -->
 		<slot />
 	</body>
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
+		--b: rgb(163, 213, 255);
+		--c: rgb(131, 201, 244);
+		
+
+
+		--e: rgb(118, 129, 179);
+		--a: rgb(217, 240, 255);
+		--d: rgb(111, 115, 210);
+
+
+		--a: rgb(63, 142, 252);
+		--al: rgb(253, 210, 122);
+		--ad: rgb(255, 123, 0);
+		/* --accent: 136, 58, 234; */
+		/* --accent-light: 224, 204, 250; */
+		/* --accent-dark: 49, 10, 101; */
+
+		--accent: 63, 142, 252;
+		--accent-light: 173, 215, 246;
+		--accent-dark: 38, 103, 255;
 		--accent-gradient: linear-gradient(
 			45deg,
 			rgb(var(--accent)),
@@ -47,5 +69,11 @@ const { title } = Astro.props;
 			Bitstream Vera Sans Mono,
 			Courier New,
 			monospace;
+	}
+
+	.bg{
+		background: #232526;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	}
 </style>

@@ -1,0 +1,112 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Subtitle from "../components/Subtitle.astro";
+import Footer from "../components/Footer.astro";
+
+
+const TIMELINE = [
+  {
+    date: "2023 - 2024",
+    title: "Cosas nuevas por aprender",
+    subtitle:
+      "Casi todo el año de 2022 fue hacer páginas estáticas, pero ahora estaba en un punto que querer aprender más, y querer hacer páginas dinámicas, así que me adentré en el mundo de React, MongoDB, Node.js, Postgresql, Prisma, Next.js, Typescript, Tailwind CSS",
+  },
+  {
+    date: "En 2022",
+    title: "Trabajos de freelance",
+    subtitle:
+      "Con los conocimientos previos de HTML, CSS y JavaScript, empecé a trabajar cómo freelance, solo con pequeñas páginas estáticas, para cierto tipo de clientes. Estos proyectos eran pequeñas empresas que necesitaban una página web para mostrar la información de su negocio, nada de complicaciones, esto era html y css con un poco de javascript.",
+  },
+  {
+    date: "En 2021",
+    title: "Todo este tiempo estuvo conmigo",
+    subtitle:
+      "En la universidad me di cuenta que lo que estaba estudiando no era mucho de mi agrado, así dejé la universidad y me di un tiempo para empezar de nuevo, ahora tenía que descubrir cuál era mi pasión. Y fue cuando entendí que lo mío era la programación, fue este año que retomé los estudios del desarrollo web dando un siguiente paso, JavaScript.",
+  },
+  {
+    date: "En 2019",
+    title: "Mis primeros proyectos",
+    subtitle:
+      "Conforme estudiaba en la universidad, alternava para aprender más sobre programación, no era muy constante, pues solo lo hacía cuando me apetecía, tenía en mente otras cosas, la programación no era mi prioridad, pero aún con eso, saqué algunos proyectos solamente con HTML y CSS más elaborados y con mejor diseño gracias a mis conocimientos de CSS.",
+  },
+  {
+    date: "Julio 2018",
+    title: "Terminé la preparatoria",
+    subtitle:
+      "Terminé aprendiendo sobre HTML y CSS, pero no me quedé conforme con eso y traté de buscar más información al respecto.",
+  },
+  {
+    date: "En 2016",
+    title: "Mis inicios en la programación",
+    subtitle:
+      "A mediados de 2016, en preparatoria tuve una clase de programación, emepcé por aprender con un programa llamado NetBeans, más tarde aprendí cosas muy básicas de HTML y CSS",
+  },
+];
+---
+
+<Layout title="Hola, Soy Fer">
+  <section
+    class="flex items-center justify-center flex-col astro"
+    id="about-me"
+  >
+      <Subtitle title="Sobre mí"/>
+      <div class="flex flex-col gap-6 mt-6">
+        <p class="text-gray-300 text-about-me text-xl">
+          Mis primeros pasos en la programación comenzaron en mi tercer semestre
+          de preparatoria, cuando elegí una materia extra: programación. Aprendí
+          con NetBeans, creando programas que resolvían problemas matemáticos y
+          fórmulas de nutrición. Luego, me adentré en el desarrollo web con HTML y
+          CSS, experimentando la emoción de cambiar el color de fondo de mi página
+          a azul.
+        </p>
+        <p class="text-gray-300 text-about-me text-xl">
+          Después de la preparatoria, continué aprendiendo de manera autodidacta,
+          creando proyectos básicos con HTML y CSS por puro gusto y pasión.
+        </p>
+        <p class="text-gray-300 text-about-me text-xl">
+          Mis objetivos futuros incluyen mejorar mis habilidades en el desarrollo
+          full-stack, aprender nuevas tecnologías y frameworks, y contribuir a
+          proyectos innovadores con impacto positivo. Aspiro a convertirme en un
+          desarrollador líder y a compartir mis conocimientos con la próxima
+          generación de programadores.
+        </p>
+        <p class="text-gray-300 text-about-me text-xl text-left w-full">
+          Línea de tiempo de mis inicios hasta la actualidad en la programación
+          web:
+        </p>
+      </div>
+
+    <ol class="relative border-s border-gray-200 dark:border-gray-700">
+      {
+        TIMELINE.map(({ date, subtitle, title }) => (
+          <li class="mb-10 ms-4">
+            <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-3 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700" />
+            <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+              {date}
+            </time>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+              {title}
+            </h3>
+            <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+              {subtitle}
+            </p>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+  <Footer title="about"/>
+</Layout>
+
+<style>
+  .astro {
+    margin: auto;
+    padding: 1rem;
+    margin-top: 40px;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+</style>

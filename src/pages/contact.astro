@@ -1,0 +1,146 @@
+---
+import Footer from "../components/Footer.astro";
+import Subtitle from "../components/Subtitle.astro";
+import Discord from "../icons/Discord.astro";
+import Instagram from "../icons/Instagram.astro";
+import Whatsapp from "../icons/Whatsapp.astro";
+import Layout from "../layouts/Layout.astro";
+
+
+---
+
+<Layout title="Hola, Soy Fer">
+    <section
+      class="min-h-[100vh] flex items-center justify-center flex-col astro w-[600px]"
+      id="about-me"
+    >
+    <Subtitle title="Contáctame" className="text-center"/>
+    <p class="text-center mb-4 text-gray-300">Puedes contactarme a través de:</p>
+    <div class="flex gap-6 mb-6">
+      <a href="https://www.instagram.com/gmsus4.dev/" target="_blank">
+        <Instagram class="size-10 cursor-pointer"/>
+      </a>
+      <a href="https://wa.me/3861112341" target="_blank">
+        <Whatsapp class="size-10 cursor-pointer"/>
+      </a>
+        <!-- <a href="" target="_blank">
+          <Discord class="size-10 cursor-pointer"/>
+        </a> -->
+    </div>
+    <!-- <div class="p-4 mx-auto max-w-3xl rounded-lg border-gray-50 lg:p-8 w-full">
+      <form>
+        <div class="grid md:gap-8 md:grid-cols-2">
+          <div class="mb-6">
+            <label
+              for="first_name"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300 opacity-80"
+              >First name</label
+            ><input
+              required=""
+              type="text"
+              id="first_name"
+              placeholder="John"
+              class="bg-[#23262d] border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder:text-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              value=""
+            />
+          </div><div class="mb-6">
+            <label
+              for="last_name"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300 opacity-80"
+              >Last name</label
+            ><input
+              required=""
+              type="text"
+              id="last_name"
+              placeholder="Doe"
+              class="bg-[#23262d] border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder:text-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              value=""
+            />
+          </div>
+        </div><div class="mb-6">
+          <label
+            for="email"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300 opacity-80"
+            >Email address</label
+          ><input
+            required=""
+            type="email"
+            id="email"
+            placeholder="john.doe@company.com"
+            class="bg-[#23262d] border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder:text-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            value=""
+          />
+        </div><div class="mb-6">
+          <label
+            for="subject"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300 opacity-80"
+            >Subject</label
+          ><input
+            required=""
+            type="text"
+            id="subject"
+            class="bg-[#23262d] border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder:text-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Subject name"
+            value=""
+          />
+        </div><div class="mb-6">
+          <label
+            for="message"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400 opacity-80"
+            >Message</label
+          ><textarea
+            required=""
+            id="message"
+            rows="4"
+            class="bg-[#23262d] border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder:text-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Your message..."
+            data-lt-tmp-id="lt-40559"
+            spellcheck="false"
+            data-gramm="false"></textarea>
+        </div>
+        <div class="w-full flex items-end justify-end">
+          <button
+            class="text-white font-medium rounded-lg text-base px-5 py-3 w-full sm:w-auto text-center bg-blue-700"
+            type="submit"
+            ><span class="flex justify-center items-center">Enviar</span
+            ></button
+          >
+        </div>
+      </form>
+    </div> -->
+    </section>
+    <!-- <Footer title="contact"/> -->
+</Layout>
+
+<style>
+    main,
+    .astro {
+      margin: auto;
+      padding: 1rem;
+      width: 800px;
+      max-width: calc(100% - 2rem);
+      color: white;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    .text-gradient {
+      background-image: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 400%;
+      background-position: 0%;
+    }
+    h1,
+    h2 {
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  </style>
+  
