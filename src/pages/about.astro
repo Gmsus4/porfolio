@@ -56,8 +56,7 @@ const TIMELINE = [
           de preparatoria, cuando elegí una materia extra: programación. Aprendí
           con NetBeans, creando programas que resolvían problemas matemáticos y
           fórmulas de nutrición. Luego, me adentré en el desarrollo web con HTML y
-          CSS, experimentando la emoción de cambiar el color de fondo de mi página
-          a azul.
+          CSS, experimentando la emoción de poder cambiar el color de fondo de mi página.
         </p>
         <p class="text-gray-300 text-about-me text-xl">
           Después de la preparatoria, continué aprendiendo de manera autodidacta,
@@ -76,7 +75,7 @@ const TIMELINE = [
         </p>
       </div>
 
-    <ol class="relative border-s border-gray-200 dark:border-gray-700">
+    <ol class="relative border-s border-gray-200 dark:border-gray-700 flex flex-col-reverse">
       {
         TIMELINE.map(({ date, subtitle, title }) => (
           <li class="mb-10 ms-4">
@@ -108,5 +107,9 @@ const TIMELINE = [
     color: white;
     font-size: 20px;
     line-height: 1.6;
+  }
+
+  li:first-child {
+    margin-bottom: 0;
   }
 </style>
