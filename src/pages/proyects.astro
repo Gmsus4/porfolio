@@ -19,13 +19,15 @@ import React from "../icons/React.astro";
 import Redux from "../icons/Redux.astro";
 import Tailwind from "../icons/Tailwind.astro";
 import TypeScript from "../icons/TypeScript.astro";
+import WebPage from "../icons/WebPage.astro";
 import Layout from "../layouts/Layout.astro";
 
 const PROYECTS = [
   {
     title: "Teslo-Shop",
     description:
-      "Un ecommerce con una sección administrativa que permite agregar o eliminar productos, además de integrar compras mediante PayPal.",
+      // "Un ecommerce con una sección administrativa que permite agregar o eliminar productos, además de integrar compras mediante PayPal.",
+      " Teslo Shop es una tienda en línea de moda y accesorios inspirados en el estilo y la innovación de Tesla. Ofrece una experiencia de compra intuitiva y moderna, donde los usuarios pueden explorar una variedad de productos en categorías como ropa y accesorios de tendencia.",
     img: "/img/teslo-shop.webp",
     icons: [NextJS, Postgresql, Prisma, Tailwind, TypeScript],
     linkToPage: 'https://teslo-shop-black.vercel.app/',
@@ -34,7 +36,8 @@ const PROYECTS = [
   {
     title: "Limeman",
     description:
-      "Una red social similar a Instagram donde puedes ver, crear, eliminar y actualizar publicaciones. Utiliza Firebase para la base de datos y la autenticación.",
+    // "Una red social similar a Instagram donde puedes ver, crear, eliminar y actualizar publicaciones. Utiliza Firebase para la base de datos y la autenticación.",
+      "LimeSocial es una plataforma de interacción social que permite a los usuarios conectarse y compartir contenido. Con un sistema de autenticación segura, los usuarios pueden registrarse y acceder para personalizar su experiencia y descubrir nuevas oportunidades de conexión en una comunidad digital.",
     img: "/img/limeman.webp",
     icons: [React, Firebase, Chakraui],
     linkToPage: 'https://limesocial.vercel.app/',
@@ -43,16 +46,18 @@ const PROYECTS = [
   {
     title: "FerCamp",
     description:
-      "Una red social para crear puntos de reunión y organizar campamentos con amigos, ideal para conocer nuevas personas.",
+      // "Una red social para crear puntos de reunión y organizar campamentos con amigos, ideal para conocer nuevas personas.",
+      "FerrCamp es una plataforma diseñada para facilitar la gestión y organización de campamentos. Permite a los administradores crear, editar y gestionar actividades, inscripciones y recursos, optimizando la experiencia tanto para organizadores como para participantes.",
     img: "/img/fer-camp.webp",
     icons: [NodeJS, Express, MongoDB, Bootstrap],
     linkToPage: 'https://ferr-camp.onrender.com/',
     linkToProyect: 'https://github.com/Gmsus4/ferCamp/tree/master'
   },
   {
-    title: "CalendarApp",
+    title: "CalendarDate",
     description:
-      "Una página web sobre un calendario interactivo que permite agregar, editar y eliminar eventos, ideal para la gestión de tu tiempo.",
+      // "Una página web sobre un calendario interactivo que permite agregar, editar y eliminar eventos, ideal para la gestión de tu tiempo.",
+      "CalendarDate es una aplicación web que permite a los usuarios gestionar y visualizar fechas importantes y eventos de manera intuitiva. Ofrece un calendario interactivo donde es fácil agregar, modificar o eliminar eventos, optimizando la planificación y recordatorio de fechas relevantes.",
     img: "/img/calendar-app.webp",
     icons: [MongoDB, Express, React, NodeJS, Redux],
     linkToPage: 'https://calendardate.netlify.app/',
@@ -61,7 +66,8 @@ const PROYECTS = [
   {
     title: "SimplyClima",
     description:
-      "Una página minimalista que muestra el clima actual utilizando una API para obtener la información meteorológica.",
+      // "Una página minimalista que muestra el clima actual utilizando una API para obtener la información meteorológica.",
+      "SimplyClima es una aplicación web sencilla y moderna que permite a los usuarios consultar el pronóstico del clima en tiempo real. Ofrece información precisa sobre temperatura, humedad y condiciones meteorológicas actuales, optimizando la experiencia con una interfaz clara y fácil de usar",
     img: "/img/simply-clima.webp",
     icons: [Html, CSSIcon, JavaScript],
     linkToPage: 'https://simplyclima.netlify.app/',
@@ -70,7 +76,8 @@ const PROYECTS = [
   {
     title: "pianovirtualonline",
     description:
-      "Una página que te permite tocar un piano virtual de dos octavas, con un diseño minimalista.",
+      // "Una página que te permite tocar un piano virtual de dos octavas, con un diseño minimalista.",
+      "Piano Virtual Online es una aplicación web que permite a los usuarios tocar un piano virtual desde su navegador. Ofrece una experiencia interactiva donde se pueden practicar acordes y melodías, ideal para principiantes y entusiastas que deseen explorar el piano de manera accesible y gratuita.",
     img: "/img/virtual-piano.webp",
     icons: [Html, CSSIcon, JavaScript],
     linkToPage: 'https://pianovirtualonline.netlify.app/',
@@ -95,31 +102,48 @@ const PROYECTS = [
       >
         {
           PROYECTS.map(({ description, img, title, icons, linkToPage, linkToProyect }) => (
-            <div class=" dark:bg-gray-800 dark:border-gray-700 bg-white border border-gray-200 rounded-lg shadow">
-              <a href={linkToPage} target="_blank">
-                <img class="rounded-t-lg" src={`${img}`} alt={`${title}-image`} />
-              </a>
-              <div class="p-5">
+            <div class=" dark:bg-gray-800 dark:border-gray-700 bg-white border border-gray-200 rounded-lg shadow flex justify-between flex-col">
+
+              <div> {/* Header img, title, description */}
                 <a href={linkToPage} target="_blank">
-                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    {title}
-                  </h5>
-                </a>  
-                <p class="mb-3 font-normal text-lg text-start text-pretty text-gray-700 dark:text-gray-400">
-                  {description}
-                </p>
-                <div class="flex gap-2 items-center justify-around my-6">
+                  <img class="rounded-t-lg" src={`${img}`} alt={`${title}-image`} />
+                </a>
+                <div class="p-5 pb-0 flex-col justify-between">
+                  <a href={linkToPage} target="_blank">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                      {title}
+                    </h5>
+                  </a>  
+                  <p class="mb-3 font-normal text-lg text-start text-pretty text-gray-700 dark:text-gray-400">
+                    {description}
+                  </p>
+                </div>
+              </div>
+
+
+
+              <div class="p-5 pt-0">
+                <div class="flex gap-4 my-6 justify-around">
                   {icons.map((Icon) => (
                     <Icon class="size-10" />
                   ))}
                 </div>
-                <a
-                  href={linkToProyect} target="_blank"
-                  class="inline-flex gap-2 items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg hover:bg-black/70 transition-colors ease-in focus:ring-4 focus:outline-none focus:ring-blue-300 bg-black/90"
-                >
-                  Ver proyecto
-                  <GitHub class="size-6"/>
-                </a>
+                <div class="flex justify-between">
+                  <a
+                    href={linkToProyect} target="_blank"
+                    class="inline-flex gap-2 items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg hover:bg-black/70 transition-colors ease-in focus:ring-4 focus:outline-none focus:ring-blue-300 bg-black/90"
+                  >
+                    Ver proyecto
+                    <GitHub class="size-6"/>
+                  </a>
+                  <a
+                    href={linkToPage} target="_blank"
+                    class="inline-flex gap-2 items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg hover:bg-black/70 transition-colors ease-in focus:ring-4 focus:outline-none focus:ring-blue-300 bg-black/90 view-page"
+                  >
+                    Ver página
+                    <WebPage class="size-6"/>
+                  </a>
+                </div>
               </div>
             </div>
           ))
@@ -141,5 +165,10 @@ const PROYECTS = [
     color: white;
     font-size: 20px;
     line-height: 1.6;
+  }
+
+  .view-page {
+    background-color: var(--accentH);
+    color: black;
   }
 </style>
