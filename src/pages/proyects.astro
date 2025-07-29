@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Subtitle from "../components/Subtitle.astro";
+import AstroIcon from "../icons/AstroIcon.astro";
 import Bootstrap from "../icons/Bootstrap.astro";
 import Chakraui from "../icons/Chakraui.astro";
 import CSSIcon from "../icons/CSSIcon.astro";
@@ -23,6 +24,15 @@ import WebPage from "../icons/WebPage.astro";
 import Layout from "../layouts/Layout.astro";
 
 const PROYECTS = [
+  {
+    title: "Tagblade",
+    description:
+      "Tagblade es una agencia de desarrollo web profesional que diseña y desarrolla sitios web que combinan rendimiento, estética y propósito. Ofrece soluciones web completas incluyendo diseño responsivo, código optimizado, hosting y mantenimiento, creando experiencias digitales modernas que impulsan el crecimiento de los negocios.",
+    img: "/img/tagblade.webp",
+    icons: [AstroIcon, TypeScript, Tailwind],
+    linkToPage: 'https://tagblade.com',
+    linkToProyect: 'https://github.com/Gmsus4/tagblade'
+  },
   {
     title: "Teslo-Shop",
     description:
@@ -103,7 +113,6 @@ const PROYECTS = [
         {
           PROYECTS.map(({ description, img, title, icons, linkToPage, linkToProyect }) => (
             <div class=" dark:bg-gray-800 dark:border-gray-700 bg-white border border-gray-200 rounded-lg shadow flex justify-between flex-col">
-
               <div> {/* Header img, title, description */}
                 <a href={linkToPage} target="_blank">
                   <img class="rounded-t-lg" src={`${img}`} alt={`${title}-image`} />
@@ -119,9 +128,6 @@ const PROYECTS = [
                   </p>
                 </div>
               </div>
-
-
-
               <div class="p-5 pt-0">
                 <div class="flex gap-4 my-6 justify-around">
                   {icons.map((Icon) => (
@@ -131,14 +137,14 @@ const PROYECTS = [
                 <div class="flex justify-between">
                   <a
                     href={linkToProyect} target="_blank"
-                    class="inline-flex gap-2 items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg hover:bg-black/70 transition-colors ease-in focus:ring-4 focus:outline-none focus:ring-blue-300 bg-black/90"
+                    class="inline-flex gap-2 items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg view-proyect"
                   >
                     Ver proyecto
-                    <GitHub class="size-6"/>
+                    <GitHub class="size-6 rotate"/>
                   </a>
                   <a
                     href={linkToPage} target="_blank"
-                    class="inline-flex gap-2 items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg hover:bg-black/70 transition-colors ease-in focus:ring-4 focus:outline-none focus:ring-blue-300 bg-black/90 view-page"
+                    class="inline-flex gap-2 items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg view-page"
                   >
                     Ver página
                     <WebPage class="size-6"/>
@@ -149,10 +155,8 @@ const PROYECTS = [
           ))
         }
       </div>
-      
     </section>
     <Footer title="proyects"/>
-
 </Layout>
 
 <style>
@@ -169,6 +173,36 @@ const PROYECTS = [
 
   .view-page {
     background-color: var(--accentH);
+    transition: 0.5s ease all;
+    color: white;
+    outline: none;
+  }
+
+  .view-page:hover {
+    background-color: black;
+    color: var(--accentH);
+    outline: 1px solid var(--accentH); /* borde visible que no altera el layout */
+  }
+
+  .view-proyect {
+    background-color: black;
+    transition: 0.5s ease all;
+    color: white;
+    outline: none;
+  }
+
+  .view-proyect:hover {
+    background-color: white;
     color: black;
+    outline: 1px solid black; /* borde visible que no altera el layout */
+  }
+
+  .view-proyect:hover .rotate {
+    transform: rotate(360deg);
+    transition: transform 0.5s ease;
+  }
+
+  .rotate {
+    transition: transform 0.5s ease;
   }
 </style>

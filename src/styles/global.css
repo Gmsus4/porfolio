@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+		--a: #E9560A;
+		--al: #f7a97f;
+		--ad: #702a04;
+
+		--accentH: #E9560A;
+		--accent: 233, 86, 10;
+		--accent-light: 247, 169, 127;
+		--accent-dark: 112, 42, 4;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+
+	html {
+		font-family: system-ui, sans-serif;
+		background: #13151a;
+		background-size: 224px;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+
+	.bg{
+		background: #232526;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	}
